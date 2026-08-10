@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    app_name: str = "Demo FastAPI"
+    app_name: str = "demo-fastapi-project"
     app_env: str = "development"
     debug: bool = True
 

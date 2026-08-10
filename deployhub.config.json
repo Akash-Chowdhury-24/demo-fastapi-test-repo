@@ -1,0 +1,79 @@
+{
+  "project": "demo-fastapi-project",
+  "version": "2026.08.10.2010",
+  "projectType": "backend",
+  "artifact": true,
+  "storage": [
+    "aws"
+  ],
+  "defaultEnvironment": "development",
+  "unprefixedSecretEnvironment": "development",
+  "legacyHistoryMigrated": true,
+  "environments": {
+    "development": {
+      "enabled": true,
+      "method": "ec2",
+      "trigger": "push",
+      "config": {
+        "deploymentType": "server",
+        "host": "13.201.82.219",
+        "user": "ec2-user",
+        "keyPath": "C:\\Users\\diabu\\Downloads\\deployhub test key pair.pem",
+        "sshPort": 22,
+        "ec2InstanceId": "i-094772096930c4b64",
+        "awsRegion": "ap-south-1",
+        "deployPath": "/var/www/demo-fastapi-project",
+        "path": "/var/www/demo-fastapi-project",
+        "appName": "demo-fastapi-project",
+        "framework": "fastapi",
+        "port": 8000
+      }
+    },
+    "production": {
+      "enabled": true,
+      "method": "ec2",
+      "trigger": "manual",
+      "config": {
+        "deploymentType": "server",
+        "host": "3.110.49.233",
+        "user": "ec2-user",
+        "keyPath": "C:\\Users\\diabu\\Downloads\\deployhub test key pair.pem",
+        "sshPort": 22,
+        "ec2InstanceId": "i-0b5183505a3c99be8",
+        "awsRegion": "ap-south-1",
+        "deployPath": "/var/www/demo-fastapi-project",
+        "path": "/var/www/demo-fastapi-project",
+        "appName": "demo-fastapi-project",
+        "framework": "fastapi",
+        "port": 8000
+      }
+    }
+  },
+  "healthCheck": {
+    "url": "",
+    "timeout": 30
+  },
+  "notifications": {
+    "slack": false,
+    "email": false,
+    "webhook": false
+  },
+  "pipeline": {
+    "test": true,
+    "docker": false,
+    "deploy": true,
+    "verify": false,
+    "notify": false
+  },
+  "artifactRetention": 10,
+  "cli": {
+    "source": "npm:@akash-chowdhury-24/deployhub"
+  },
+  "framework": "fastapi",
+  "language": "python",
+  "buildCommand": null,
+  "startCommand": "uvicorn main:app --host 0.0.0.0 --port 8000",
+  "buildOutput": ".",
+  "port": 8000,
+  "docker": false
+}
