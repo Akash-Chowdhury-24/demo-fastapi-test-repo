@@ -14,6 +14,6 @@ app.include_router(api_router)
 @app.get("/")
 def root() -> dict[str, str]:
     return {
-        "message": f"Welcome to {settings.app_name} dev dev",
+        "message": f"Welcome to {settings.app_name} dev and prod 2nd",
         "docs": "/docs",
     }
