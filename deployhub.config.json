@@ -13,7 +13,7 @@
     "development": {
       "enabled": true,
       "method": "ec2",
-      "trigger": "push",
+      "trigger": "manual",
       "config": {
         "deploymentType": "server",
         "host": "3.7.254.245",
@@ -32,7 +32,7 @@
     "production": {
       "enabled": true,
       "method": "ec2",
-      "trigger": "manual",
+      "trigger": "push",
       "config": {
         "deploymentType": "server",
         "host": "65.0.127.121",
