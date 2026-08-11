@@ -1,6 +1,6 @@
 {
   "project": "demo-fastapi-project",
-  "version": "2026.08.10.2010",
+  "version": "2026.08.11.1023",
   "projectType": "backend",
   "artifact": true,
   "storage": [
@@ -16,7 +16,7 @@
       "trigger": "push",
       "config": {
         "deploymentType": "server",
-        "host": "13.201.82.219",
+        "host": "13.201.89.170",
         "user": "ec2-user",
         "keyPath": "C:\\Users\\diabu\\Downloads\\deployhub test key pair.pem",
         "sshPort": 22,
@@ -35,7 +35,7 @@
       "trigger": "manual",
       "config": {
         "deploymentType": "server",
-        "host": "3.110.49.233",
+        "host": "13.232.26.218",
         "user": "ec2-user",
         "keyPath": "C:\\Users\\diabu\\Downloads\\deployhub test key pair.pem",
         "sshPort": 22,
