@@ -1,49 +1,28 @@
 {
   "project": "demo-fastapi-project",
-  "version": "2026.08.11.1023",
+  "version": "2026.08.20.1202",
   "projectType": "backend",
   "artifact": true,
   "storage": [
     "aws"
   ],
-  "defaultEnvironment": "development",
-  "unprefixedSecretEnvironment": "development",
+  "defaultEnvironment": "default",
+  "unprefixedSecretEnvironment": "default",
   "legacyHistoryMigrated": true,
   "environments": {
-    "development": {
+    "default": {
       "enabled": true,
-      "method": "ec2",
+      "method": "ssh",
       "trigger": "push",
       "config": {
         "deploymentType": "server",
-        "host": "3.7.254.245",
-        "user": "ec2-user",
-        "keyPath": "C:\\Users\\diabu\\Downloads\\deployhub test key pair.pem",
+        "host": "15.252.67.31",
+        "user": "ubuntu",
+        "keyPath": "C:\\Users\\diabu\\Downloads\\LightsailDefaultKey-ap-south.pem",
         "sshPort": 22,
-        "ec2InstanceId": "i-07ce09b1fdb36422d",
-        "awsRegion": "ap-south-1",
-        "deployPath": "/var/www/demo-fastapi-project",
-        "path": "/var/www/demo-fastapi-project",
-        "appName": "demo-fastapi-project",
-        "framework": "fastapi",
-        "port": 8000
-      }
-    },
-    "production": {
-      "enabled": true,
-      "method": "ec2",
-      "trigger": "manual",
-      "config": {
-        "deploymentType": "server",
-        "host": "65.0.127.121",
-        "user": "ec2-user",
-        "keyPath": "C:\\Users\\diabu\\Downloads\\deployhub test key pair.pem",
-        "sshPort": 22,
-        "ec2InstanceId": "i-01f48d615d04858e3",
-        "awsRegion": "ap-south-1",
-        "deployPath": "/var/www/demo-fastapi-project",
-        "path": "/var/www/demo-fastapi-project",
-        "appName": "demo-fastapi-project",
+        "deployPath": "/var/www/queunity-backend",
+        "path": "/var/www/queunity-backend",
+        "appName": "\tdemo-fastapi-project",
         "framework": "fastapi",
         "port": 8000
       }
