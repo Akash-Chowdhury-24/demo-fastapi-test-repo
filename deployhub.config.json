@@ -22,7 +22,7 @@
           "mode": "ssh"
         },
         "dockerHost": "",
-        "host": "13.201.61.73",
+        "host": "13.126.37.133",
         "user": "ec2-user"
       }
     }
