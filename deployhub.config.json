@@ -1,0 +1,80 @@
+{
+  "project": "demo-fastapi-project",
+  "version": "2026.09.07.1503",
+  "projectType": "backend",
+  "artifact": true,
+  "storage": [
+    "aws"
+  ],
+  "defaultEnvironment": "default",
+  "unprefixedSecretEnvironment": "default",
+  "legacyHistoryMigrated": true,
+  "environments": {
+    "default": {
+      "enabled": true,
+      "method": "docker",
+      "trigger": "push",
+      "config": {
+        "deploymentType": "server",
+        "dockerImageName": "akashchowdhury24/demo-private-repo",
+        "dockerRegistryUrl": "",
+        "remote": {
+          "mode": "ssh"
+        },
+        "dockerHost": "",
+        "host": "13.126.36.213",
+        "user": "ec2-user",
+        "port": 8000,
+        "hooks": {
+          "preDeploy": [
+            {
+              "command": "sudo dnf update -y",
+              "continueOnError": true
+            },
+            {
+              "command": "sudo dnf install -y docker",
+              "continueOnError": false
+            },
+            {
+              "command": "sudo systemctl enable --now docker",
+              "continueOnError": false
+            },
+            {
+              "command": "sudo usermod -aG docker ec2-user",
+              "continueOnError": false,
+              "reconnect": true
+            }
+          ]
+        }
+      },
+      "branch": "main"
+    }
+  },
+  "healthCheck": {
+    "url": "",
+    "timeout": 30
+  },
+  "notifications": {
+    "slack": false,
+    "email": false,
+    "webhook": false
+  },
+  "pipeline": {
+    "test": true,
+    "docker": true,
+    "deploy": true,
+    "verify": false,
+    "notify": false
+  },
+  "artifactRetention": 10,
+  "cli": {
+    "source": "npm:@akash-chowdhury-24/deployhub"
+  },
+  "framework": "fastapi",
+  "language": "python",
+  "buildCommand": null,
+  "startCommand": "uvicorn main:app --host 0.0.0.0 --port 8000",
+  "buildOutput": ".",
+  "port": 8000,
+  "docker": true
+}
