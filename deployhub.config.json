@@ -22,7 +22,7 @@
           "mode": "ssh"
         },
         "dockerHost": "",
-        "host": "13.126.36.213",
+        "host": "13.207.153.230",
         "user": "ec2-user",
         "port": 8000,
         "hooks": {
